@@ -1,0 +1,37 @@
+<html>
+
+<script>
+//Condition 1, where we are accessing the let and const inside the block scope
+function driversLicence_cond1(isPassed){
+if(isPassed){
+    let name = "Sachin";
+    const dob = 1990;
+    console.log('The driver with name '+name+'with date of birth '+dob+' is allowed to drive the car')
+}
+}
+driversLicence_cond1(true);
+//Status : Ran fine
+
+//Condition 2, where we are accessing the let and const outside the if block
+function driversLicence_cond2(isPassed){
+    if(isPassed){
+        let name = "sachin";
+        const dob = 1990;
+    }
+    console.log('The driver with name '+name+'with date of birth '+dob+' is allowed to drive the car')
+}
+driversLicence_cond2(true);
+//Status : Give error
+
+//Condition 3, where we are accessing the let and const outside the if block. But this time we will declare it outside the block scope
+function driversLicence_cond3(isPassed){
+    let name;
+    const dob = 1990;//const should be initialized
+    if(isPassed){
+name = "sachin";
+    }
+    console.log('The driver with name '+name+'with date of birth '+dob+' is allowed to drive the car')
+}
+driversLicence_cond3(true);
+</script>
+</html>

@@ -1,0 +1,15 @@
+<html>
+
+<script>
+//Es5 using IIFE
+var dobs = [1990,1989,1988,1967];
+var ages = dobs.map(function(ele){
+    return (2018-ele);
+});
+console.log(ages);
+//Es6 using IIFE
+const dobs_new = [1990,1989,1988,1967];
+const ages_new = dobs_new.map(ele=>2018-ele);
+console.log(ages_new);
+</script>
+</html>

@@ -1,0 +1,12 @@
+<html>
+
+<script>
+//Es6 using IIFE
+const dobs_new = [1990,1989,1988,1967];
+let ages_new = dobs_new.map((ele,index)=>{
+    let current = new Date().getFullYear()-ele;
+    return `Person ${index} : ${current-ele} years`;
+});
+console.log(ages_new);
+</script>
+</html>

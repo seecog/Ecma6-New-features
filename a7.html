@@ -1,0 +1,22 @@
+<html>
+
+<script>
+//Es5 using IIFE
+var firstName = "Mohan";
+var lastName = "Kumar";
+var yearOfBirth = 1990;
+function calculateAge(year){
+    return (2018-year);
+}
+console.log('The person with name '+firstName+' '+lastName+' born in '+yearOfBirth+' is of age '+calculateAge(yearOfBirth)+' Years.')
+
+//Es6 using IIFE
+var firstName = "Mohan";
+var lastName = "Kumar";
+var yearOfBirth = 1990;
+function calculateAge(year){
+    return (2018-year);
+}
+console.log(`The person with name ${firstName} ${lastName} born in ${yearOfBirth} is of age   ${calculateAge(yearOfBirth)} Years.`);
+</script>
+</html>
