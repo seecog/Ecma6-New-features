@@ -1,0 +1,61 @@
+<html>
+
+
+<script>
+//ES5
+/*var Person = function(name,dob,height,weight){
+this.name = name;
+this.dob = dob;
+this.height=height;
+this.weight=weight;
+}
+Person.prototype.calAge = function(dob){
+    return new Date().getFullYear() - dob;
+}
+
+var Doctor = function(name,dob,height,weight,speciality,contact){
+     Person.call(this,name,dob,height,weight);
+    this.speciality = speciality;
+    this.contact = contact;
+}
+
+Doctor.prototype = Object.create(Person.prototype)
+Doctor.prototype.getInfo = function(){
+    return this.name+","+this.calAge(this.dob)+","+this.weight+","+this.height+","+this.speciality+","+this.contact;
+}*/
+//var doc1 = new Doctor("Mohan",1990,5.8,65,"Neuro Surgeon",8838438934);
+//console.log("The doctor details : ",doc1.getInfo());
+
+
+//ES6
+
+class Person1{
+constructor(name,dob,height,weight){
+this.name = name;
+this.dob = dob;
+this.height=height;
+this.weight=weight;
+}
+calcAge(dob){
+return new Date().getFullYear() - dob;
+}
+}
+
+class Doctor1 extends Person1{
+
+constructor(name,dob,height,weight,speciality,contact){
+super(name,dob,height,weight);
+this.speciality = speciality;
+this.contact = contact;
+}
+
+getInfo(){
+    return `${this.name} , ${this.calcAge(this.dob)} , ${this.height} , ${this.weight}, ${this.speciality} , ${this.contact}`;
+}
+
+}
+var doc1 = new Doctor1("Mohan",1990,5.8,65,"Neuro Surgeon",8838438934);
+console.log("The doctor details : ",doc1.getInfo());
+
+</script>
+</html>

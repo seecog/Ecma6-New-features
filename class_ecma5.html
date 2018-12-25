@@ -1,0 +1,27 @@
+<html>
+
+<body>
+
+</body>
+<script>
+//when we call the below anonomous function with new operator, then the function act as a constructor
+var Employee = function(name,age,salary,department){
+this.name = name;
+this.age = age;
+this.salary = salary;
+this.department = department;
+this.getEmployeeInformation = function(){
+return this.name+","+this.age+","+this.salary+","+this.department;
+}
+}
+
+
+Employee.prototype.incrSalary = function(inc){
+    this.salary = this.salary+inc;
+}
+var ob1 = new Employee("Mohan",21,200,"Nothing");
+console.log('Employee detail is '+ob1.getEmployeeInformation());
+ob1.incrSalary(50);
+console.log('New Employee detail after increment is '+ob1.getEmployeeInformation());
+</script>
+</html>

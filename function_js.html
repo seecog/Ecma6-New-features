@@ -1,0 +1,46 @@
+<html>
+<head>
+</head>
+<body>
+
+</body>
+<script>
+//data type of function is function
+function show(){
+    console.log('Hello World')
+}
+show();
+function add(a,b){
+    var tot = a+b;
+    console.log('The sum is '+tot);
+}
+add(2,5);
+
+function add(a,b){
+    return (a+b);
+}
+console.log('The sum is '+add(2,5));
+console.log("The type of add function is "+typeof add);
+console.log("-->"+show())
+//named function + anonomous function
+//function which no name is anonomous
+var show2 = function(){
+    console.log("New anonomus function");
+}
+show2();
+
+//Hoisting puts all function defination to the top of scope
+//Hoisting will take place for the name function.It will not take place for the anonomous function
+laugh();
+function laugh(){
+    console.log('I am laughing');
+}
+
+/*laugh2();
+var laugh2 = function(){
+    console.log('I am laughing again');
+}*/
+
+console.log(laugh)//If we pass a function name without the parenthesis, it will print the function defination
+</script>
+</html>

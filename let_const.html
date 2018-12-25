@@ -1,0 +1,59 @@
+<html>
+
+<script>
+//In ES5 , we are using var. var has functional scope
+//In ES6 , we are using let and const
+//let and const are block scoped.
+
+/*let a = 10;
+a=20;
+const b = 20;
+b = 40;*/
+
+
+//Disaplaying the usase of let and const insde for loop. Also diffrentiate it with var keyword
+
+for(var i =1;i<=100;i++){
+
+}
+console.log("The outside i is "+i);
+
+for(let j =1;j<=100;j++){
+
+}
+console.log("The outside i is "+j);
+
+function driversLicence2019(isPassed){
+const name="mohan";
+let age;
+if(isPassed){
+age = 21;
+}
+console.log("The driver named "+name+" is allowed to drive. He is of age "+age);
+}
+driversLicence2019(true);
+
+function driversLicencebangalore(isPassed){
+if(isPassed){
+    const name = "Mohan";
+    let age = 21;
+    /*console.log("The driver named "+name+" is allowed to drive. He is of age "+age);*/
+}
+/*console.log("The driver named "+name+" is allowed to drive. He is of age "+age);*/
+
+}
+//driversLicencebangalore(true);
+
+function driversLicence(isPassed){
+
+if(isPassed){//block
+var name = "Mohan";
+var age = 21;
+/*console.log("The driver named "+name+" is allowed to drive. He is of age "+age);*/
+}
+/*console.log("The driver named "+name+" is allowed to drive. He is of age "+age);*/
+}
+/*console.log("The driver named "+name+" is allowed to drive. He is of age "+age);
+driversLicence(true);*/
+</script>
+</html>

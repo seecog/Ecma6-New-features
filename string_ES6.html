@@ -1,0 +1,17 @@
+<html>
+
+<script>
+//ES5
+var firstname = "Mohan";
+var lastName = " kUmar";
+var dob = 1990;
+var calcAge = function(year){
+    return new Date().getFullYear() - year;
+}
+console.log("ES5 : First Name = "+firstname+" , Last Name = "+lastName+" , Age = "+calcAge(dob));
+
+//ES6
+//String Literal
+console.log(`ES6 : First Name = ${firstname} , Last Name = ${lastName} , Age = ${calcAge(dob)}`);
+</script>
+</html>

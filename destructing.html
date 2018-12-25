@@ -1,0 +1,46 @@
+<html>
+
+
+<script>
+//Desctructing in ES6. It extracts the values of array/object in individual entities
+var ages = [21,22,23,25];
+//ES5
+var mohan = ages[0];
+var sohan = ages[1];
+var rohan = ages[2];
+//console.log(mohan,sohan,rohan);
+
+//ES6
+var [mohan,sohan,rohan] = [21,22,23,25];
+console.log(mohan,sohan,rohan);
+
+//case of object
+var emp = {name : 'Mohan',age : 21,sal : 200};
+//ES5
+var name = emp.name;
+var age = emp.age;
+//console.log(name,age);
+
+//Es6
+var {name,age} = emp;
+//console.log(name,age);
+
+//ES6 Alias
+var {name : a,age : b} = emp;
+console.log(a,b);
+
+
+function calculateAgeRetirement(year){
+    var age = new Date().getFullYear()-year;
+    var retirement = 65-age;
+    return [age,retirement];
+}
+
+let [age1,retirement1] = calculateAgeRetirement(1990);
+
+console.log(`The person is of age ${age1} will retire in ${retirement1} years`)
+
+
+
+</script>
+</html>

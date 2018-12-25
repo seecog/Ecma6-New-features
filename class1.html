@@ -1,0 +1,34 @@
+<html>
+
+<script>
+//ES5
+var Employee = function(name,age,salary){
+this.name = name;
+this.age = age;
+this.salary= salary;
+}
+Employee.prototype.getSalary = function(){
+    return 'Your salary is '+this.salary;
+}
+var ob1 = new Employee("Mohan",21,200);
+console.log(ob1.getSalary());
+//ES6
+
+class Employee2{
+
+constructor(name,age,salary){
+this.name = name;
+this.age = age;
+this.salary = salary;
+
+}
+
+getSalary(){
+    return `Your salary is ${this.salary}`;
+}
+
+}
+var ob2 = new Employee2("Mohan",21,200);
+console.log(ob2.getSalary());
+</script>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<style>
+.box{
+    width : 200px;
+    height : 200px;
+}
+.green {
+    background-color : green;
+}
+.blue {
+    background-color : blue;
+}
+.red {
+    background-color : red;
+}
+</style>
+<body>
+<h1>List of Categories</h1>
+<div class="box green">Clothing Segment</div>
+<div class="box blue">Grocerry Segment</div>
+<div class="box red">Toy Segment</div>
+<button onclick="changeText()">Text Color</button>
+</body>
+
+<script>
+function changeText(){
+let h = document.querySelector('h1');
+let boxes = document.querySelectorAll('.box');
+let allElements = [h,...boxes];
+allElements.forEach((ele)=>{
+ele.style.color = '#ffffff';
+})
+}
+</script>
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<script>
+//Map
+//String,Number,Boolean , Object , undefined
+//Map 
+var question = new Map();
+question.set("question","What is capital of india");
+question.set(1,"Gujrat");
+question.set(2,"Bhopal");
+question.set(3,"New Delhi");
+question.set('correct',3);
+question.set(true,"Your answer is correct");
+question.set(false,"Your answer is incorrect");
+
+console.log("The question is "+question.get('question'));
+var userAns = prompt("Enter your answer ..");
+if(userAns==question.get('correct')){
+    console.log("-->",userAns,question.get('correct'));
+    console.log(question.get(true));
+}
+else{
+    console.log(question.get(false));
+}
+
+question.delete(1);
+console.log(question);
+question.forEach((key,value)=>{
+    console.log(`${key} : ${value}`)
+})
+
+</script>
+</html>

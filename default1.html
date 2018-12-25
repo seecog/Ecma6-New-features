@@ -1,0 +1,22 @@
+<html>
+
+
+<script>
+//Es5
+function getEmployeeInfo(name,age,salary){
+if(salary==undefined){
+    salary=0;
+}
+    return name+"--"+age+"--"+salary;
+}
+//console.log(getEmployeeInfo("Mohan",21,200));
+//console.log(getEmployeeInfo("Sohan",22));
+//ES6
+function getEmployeeInfoNew(name,age,salary=0){
+
+    return name+"--"+age+"--"+salary;
+}
+console.log(getEmployeeInfoNew('Mohan',21,200))
+console.log(getEmployeeInfoNew('Sohan',22))
+</script>
+</html>

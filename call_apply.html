@@ -1,0 +1,25 @@
+<html>
+<body>
+
+</body>
+<script>
+function add(a,b){
+    return (a+b);
+}
+
+var ans = add.call(null,2,5);
+console.log('The sum is '+ans);
+
+
+function multiple(){
+console.log(Array.prototype.slice.call(arguments));
+var arr = Array.prototype.slice.call(arguments);
+var s = 0;
+for(var i=0;i<arr.length;i++){
+    s = s+arr[i];
+}
+return "The sum is "+s;
+}
+console.log(multiple.apply(null,[1,2,4,6,89,90]))
+</script>
+</html>

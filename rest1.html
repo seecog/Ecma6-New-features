@@ -1,0 +1,48 @@
+<html>
+<style>
+.box{
+    width : 200px;
+    height : 200px;
+}
+.green {
+    background-color : green;
+}
+.blue {
+    background-color : blue;
+}
+.red {
+    background-color : red;
+}
+</style>
+<body>
+</body>
+
+<script>
+//
+function totalGrocerryIncome(){
+    console.log('The arguments strucrure is ',arguments)
+var grocerrySell = Array.prototype.slice.call(arguments);
+var s = 0;
+for(var i=0;i<grocerrySell.length;i++){
+    s = s+grocerrySell[i];
+}
+console.log('The total sell is '+s);
+}
+//day1
+totalGrocerryIncome(100,233,45,23,987);
+//day2
+totalGrocerryIncome(888,455,534,988,389,877,677);
+
+//ES6
+function totalGrocerryIncomeES6(...incomes){
+    let s = 0;
+for(var i=0;i<incomes.length;i++){
+    s = s+incomes[i];
+}
+console.log('The total sell is --> '+s);
+
+}
+totalGrocerryIncomeES6(100,233,45,23,987);
+totalGrocerryIncomeES6(888,455,534,988,389,877,677);
+</script>
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+
+<script>
+function totalScores(sachin,dravid,ganguly){
+console.log('The sum of scores is '+(sachin+dravid+ganguly))
+}
+//totalScores(123,125,99);
+//totalScores([123,125,99]);
+//totalScores.apply(this,[123,125,99]);
+
+//ES6
+function getTotalScores(...scores){//...scores spread operator
+var t = scores[0];
+console.log(scores[0],scores[1]);
+/*let s = 0;
+for(let i =0;i<scores[0].length;i++){
+    s = s+parseInt(scores[i]);
+}
+console.log('The sum of scores is '+s)*/
+}
+getTotalScores([123,125,99],[100,200,300]);
+
+let elecCat = ['Electronic watch','Water sensor','Microovan'];
+let clothCat = ['Puma','Levis','Cortyard'];
+let finalCat = [...elecCat,...clothCat];
+console.log('The final category list is ',finalCat)
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<script>
+//Hoisted elements always sget initialized with undefined
+var a = 10;
+{
+    let a = 20;
+}
+
+function driversLicence(isPassed){
+
+if(isPassed){
+console.log(name +"-"+age);
+var name = "Mohan";
+var age = 21;
+
+}
+}
+//driversLicence(true);
+
+function driversLicenceBangalore(isPassed){
+  
+    
+if(isPassed){
+
+let name = "Mohan";
+let age = 21;
+console.log(name +"-"+age);
+}
+}
+driversLicenceBangalore(true);
+</script>
+</html>

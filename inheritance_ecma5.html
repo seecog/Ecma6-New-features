@@ -1,0 +1,43 @@
+<html>
+<body>
+
+</body>
+<script>
+var Person = function(name,age,height,weight,contact){
+this.name = name;
+this.age = age;
+this.height = height;
+this.weight = weight;
+this.contact = contact;
+}
+Person.prototype.getPersonRecord = function(){
+    return this.name+","+this.age+","+this.height+","+this.weight+","+this.contact;
+}
+
+var Player = function(name,age,height,weight,contact,game,olymicGames,medals){
+Person.call(this,name,age,height,weight,contact);    
+this.game = game;
+this.olymicGames = olymicGames;
+this.medals = medals;
+}
+
+Player.prototype = Object.create(Person.prototype);
+
+Player.prototype.playedOlymic = function(){
+    this.olymicGames++;
+}
+
+Player.prototype.medalWoned = function(count){
+    this.medals += count;
+}
+
+Player.prototype.getPlayerRecord = function(){
+
+    return this.name+","+this.age+","+this.height+","+this.weight+","+this.olymicGames+","+this.medals;
+}
+
+var obj = new Player("Mohan",21,5.8,65,7348820668,"High Jump",3,12);
+console.log(obj.getPlayerRecord());
+
+</script>
+</html>
